@@ -2,11 +2,12 @@ import pymysql
 
 def connect_db():
     try:
-        connection = pymysql.Connect(host='localhost', port=3306, user='root', password='Root12355', database='nithin_db', charset='utf8')
+        connection = pymysql.Connect(host='localhost', port=3306, user='root', password='root', database='rishika_db', charset='utf8')
         print('DB connected')
         return connection
     except:
         print('DB connection failed')
+        return None
 
 def disconnect_db(connection):
     try:
@@ -17,16 +18,16 @@ def disconnect_db(connection):
 
 def create_db():
     connection = connect_db()
-    query = 'create database IF NOT EXISTS nithin_db;'
+    query = 'create database IF NOT EXISTS rishika_db;'
     cursor = connection.cursor()
     cursor.execute(query)
     cursor.close()
     print('DB created')
     disconnect_db(connection)
 
-def create_db():
+def create_table():
     connection = connect_db()
-    query = "create table IF NOT EXISTS persons(id int primary key, name varchar(32) not null, gender char check(gender in('m','M', 'f','F')), location varchar(32), dob datetime);"
+    query = "create table IF NOT EXISTS persons(id int primary key auto_increment, name varchar(32) not null, gender char(1) check(gender in('m','M', 'f','F')), location varchar(32), dob datetime);"
     cursor = connection.cursor()
     cursor.execute(query)
     cursor.close()
@@ -48,5 +49,6 @@ def insert_row():
     cursor.execute(query, person)
     cursor.close()
     disconnect_db(connection)
-
+create_db()
+create_table()
 insert_row()
