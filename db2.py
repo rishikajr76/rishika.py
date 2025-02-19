@@ -22,4 +22,5 @@ def disconnect_db(connection):
         print('Error while disconnecting Database')   
 
 connection = connect_db()
-disconnect_db(connection)
+if connection:
+    disconnect_db(connection)
