@@ -6,10 +6,9 @@ def get_coins(amount):
         amount %= coin
     return count
 
-
 amount = int(input("Enter the amount of money:"))
 count = get_coins(amount)
 
-print("Coin distribution:")
+print("Coins distribution:")
 for coin, count in count.items():
-    print(f"{coin} rupee coin: {count}")
+    print(f'{coin} rupee coin: {count}')
