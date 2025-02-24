@@ -7,6 +7,7 @@ y = np.random.rand(50)
 z = np.random.rand(50)
 
 fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
 
 ax.scatter(x, y, z, color='red')
 ax.set_xlabel("X-axis")
