@@ -11,7 +11,7 @@ class Menu:
     def run_menu(self):
         service = person_service.Person_service()
         while True:
-            choice = int(input('\n1:AddPerson 2:DeletePerson 3:UpdatePerson 4:SearchPerson 5:ListAllPersons 6:Exit.  Your choice: '))
+            choice = int(input('\n 1:AddPerson 2:DeletePerson 3:UpdatePerson 4:SearchPerson 5:ListAllPersons 6:Exit.  Your choice: '))
             self.match_user_choice(choice, service)
 
     def match_user_choice(self, choice, service):

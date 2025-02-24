@@ -116,6 +116,6 @@ def flights_delete(id):
     if not old_flight:
         return jsonify({'message': 'Flight not found', 'is_error': 1})
     delete_flight(id)
-    return jsonify({'message': 'Flight is deleted', 'is_error': 0})
+    return jsonify({'message': 'Flight is deleted ', 'is_error': 0})
 
 app.run(debug=True)
