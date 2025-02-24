@@ -6,7 +6,7 @@ class Db_operations:
 
     def connect_db(self):
         try:
-            connection = pymysql.Connect(host='localhost', port=3306, user='root', password='Root123', database='nithin_db', charset='utf8')
+            connection = pymysql.Connect(host='localhost', port=3306, user='root', password='root', database='rishika_db', charset='utf8')
             print('DB connected')
             return connection
         except:
@@ -21,7 +21,7 @@ class Db_operations:
 
     def create_db(self):
         connection = self.connect_db()
-        query = 'create database IF NOT EXISTS nithin_db;'
+        query = 'create database IF NOT EXISTS rishika_db;'
         cursor = connection.cursor()
         cursor.execute(query)
         cursor.close()

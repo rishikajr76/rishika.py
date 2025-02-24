@@ -31,7 +31,7 @@ class Db_operations:
 
     def create_db(self):
         connection = self.connect_db()
-        query = 'create database IF NOT EXISTS nithin_db;'
+        query = 'create database IF NOT EXISTS rishika_db;'
         cursor = connection.cursor()
         cursor.execute(query)
         cursor.close()
