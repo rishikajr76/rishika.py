@@ -1,5 +1,5 @@
 # Understanding the correlation between two variables.
-#Scatterp plot
+#Scatter plot
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
