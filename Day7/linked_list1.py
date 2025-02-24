@@ -17,14 +17,14 @@ class Linled_list:
             last = last.next
         last.next = new    
 
-    def add_at_position(self, data, position):
+    def add_at_position(self, data, pos):
         new = Node(data)
-        if position == 0:
+        if pos == 0:
             new.next = self.head
             self.head = new
             return
         current = self.head
-        for _ in range(position - 1):
+        for _ in range(pos - 1):
             if current is None:
                 print("Position is out of range.")
                 return
@@ -32,14 +32,14 @@ class Linled_list:
         new.next = current.next
         current.next = new
 
-    def del_at_position(self, position):
+    def del_at_position(self, pos):
         if self.head is None:
             print("Position is out of range.")
-        if position == 0:
+        if pos == 0:
             self.head = self.head.next
             return
         current = self.head
-        for _ in range(position - 1):
+        for _ in range(pos - 1):
             if current is None or current.next is None:
                 print("Position is out of range.")
             current = current.next
