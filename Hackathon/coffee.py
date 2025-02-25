@@ -46,6 +46,7 @@ full_data.update(extended_data)
 
 # Create a DataFrame
 df = pd.DataFrame(full_data)
+df.to_csv('Coffee_seeds.csv', index = False)
 
 # Display the first few rows of the data
 print(df)
@@ -57,7 +58,7 @@ sales_data = {
     'Filter Coffee Sales ($)': np.random.randint(1500, 5500, 12)
 }
 sales_df = pd.DataFrame(sales_data)
-sales_df.to_excel('Coffee_Sales.xlsx', index=False)
+sales_df.to_csv('Coffee_Sales.csv', index=False)
 
 # Customer Feedback Data
 feedback_data = {
@@ -65,7 +66,7 @@ feedback_data = {
     'Water Quantity Feedback': np.random.choice(['Too Much', 'Just Right', 'Too Little'], 20)
 }
 feedback_df = pd.DataFrame(feedback_data)
-feedback_df.to_excel('Customer_Feedback.xlsx', index=False)
+feedback_df.to_csv('Customer_Feedback.csv', index=False)
 
 # Sweetener Sales Data
 sweetener_data = {
@@ -75,7 +76,7 @@ sweetener_data = {
     'Sugar-Free Sales ($)': np.random.randint(500, 2000, 12)
 }
 sweetener_df = pd.DataFrame(sweetener_data)
-sweetener_df.to_excel('Sweetener_Sales.xlsx', index=False)
+sweetener_df.to_csv('Sweetener_Sales.csv', index=False)
 
 #  Analyzing the Best Coffee Seed Supplier
 seeds_summary = df.groupby('Supplier').agg({'Sales Generated ($)': 'sum'}).sort_values(by='Sales Generated ($)', ascending=False)
