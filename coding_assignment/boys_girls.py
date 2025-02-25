@@ -6,6 +6,7 @@ def arrange_students(n, boys, girls):
         if i % 2 == 0:
             if boys[i // 2] > girls[i // 2]:
                 return "NO"
+
         else:
             if girls[i // 2] > boys[i // 2]:
                 return "NO"
@@ -18,7 +19,6 @@ def main():
         n = int(input())
         boys = list(map(int, input().split()))
         girls = list(map(int, input().split()))
-        
         result = arrange_students(n, boys, girls)
         print(result)
 
