@@ -109,7 +109,6 @@ def seasonal_trends(df):
 # Calling the seasonal trends function
 seasonal_trends(sales_df)
 
-
 #  Customer Satisfaction Analysis
 def customer_satisfaction(df):
     feedback_mapping = {'Too Much': 1, 'Too Little': 1, 'Just Right': 3}
