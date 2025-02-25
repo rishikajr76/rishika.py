@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 #  Create Excel Files with Dummy Data
 
 # Coffee Seeds Data
-import pandas as pd
 
 # Original seed data
 seed_data = {
@@ -142,6 +141,7 @@ def supply_chain_analysis(df):
 # Calling the supply chain analysis function
 supply_chain_analysis(df)
 
+# Digital presence data
 digital_presence_data = {
     'Month': pd.date_range(start='2023-01-01', periods=12, freq='M').month,
     'Website Traffic': np.random.randint(1000, 10000, 12),
