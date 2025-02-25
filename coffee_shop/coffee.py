@@ -77,23 +77,23 @@ sweetener_data = {
 sweetener_df = pd.DataFrame(sweetener_data)
 sweetener_df.to_excel('Sweetener_Sales.xlsx', index=False)
 
-# 2. Analyzing the Best Coffee Seed Supplier
+#  Analyzing the Best Coffee Seed Supplier
 seeds_summary = df.groupby('Supplier').agg({'Sales Generated ($)': 'sum'}).sort_values(by='Sales Generated ($)', ascending=False)
 print("Best Supplier Based on Sales:\n", seeds_summary)
 
-# 3. Comparing Instant and Filter Coffee Sales
+#  Comparing Instant and Filter Coffee Sales
 sales_df['Difference'] = sales_df['Filter Coffee Sales ($)'] - sales_df['Instant Coffee Sales ($)']
 print("\nComparison of Sales:\n", sales_df[['Date', 'Difference']])
 
-# 4. Customer Feedback Analysis
+#  Customer Feedback Analysis
 feedback_summary = feedback_df['Water Quantity Feedback'].value_counts()
 print("\nCustomer Feedback on Water Quantity:\n", feedback_summary)
 
-# 5. Comparing Coffee Sales with Different Sweeteners
+#  Comparing Coffee Sales with Different Sweeteners
 sweetener_summary = sweetener_df[['Sugar Sales ($)', 'Jaggery Sales ($)', 'Sugar-Free Sales ($)']].sum()
 print("\nSweetener Sales Comparison:\n", sweetener_summary)
 
-# 6. Seasonal Trends Analysis
+#  Seasonal Trends Analysis
 def seasonal_trends(df):
     df['Date'] = pd.to_datetime(df['Date'])
     df['Month'] = df['Date'].dt.month
@@ -129,7 +129,7 @@ def customer_satisfaction(df):
 # Calling the customer satisfaction function
 customer_satisfaction(feedback_df)
 
-# 8. Supply Chain Analysis
+#  Supply Chain Analysis
 def supply_chain_analysis(df):
     supplier_sales = df.groupby('Supplier')['Sales Generated ($)'].sum()
 
