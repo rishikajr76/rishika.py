@@ -1,4 +1,4 @@
-#Comparing categorical data using a bar chart.
+#Comparing categorical data using a bar chart
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
